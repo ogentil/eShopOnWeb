@@ -9,7 +9,7 @@ env:
   LOCATION: eastus2
   TEMPLATE-FILE: infra/webapp.bicep
   SUBSCRIPTION-ID: 2b121bc3-e002-48e6-b5c1-9f424a9a1147
-  WEBAPP-NAME: eshoponweb-webapp54306671
+  WEBAPP-NAME: eshoponweb-webapp54306671ogb1
 
 
 jobs:
@@ -79,7 +79,7 @@ jobs:
            
     # Deploy Azure WebApp using Bicep file
     - name: deploy
-      uses: azure/arm-deploy@v2
+      uses: azure/arm-deploy@v1
       with:
         subscriptionId: ${{ env.SUBSCRIPTION-ID }}
         resourceGroupName: ${{ env.RESOURCE-GROUP }}
